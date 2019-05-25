@@ -5,7 +5,7 @@ export default function Note(props) {
         <li>
             <div>
                 <h2>{props.name}</h2>
-                <button></button>
+                <button>Delete</button>
                 <div>
                     Modified <span>{props.modified}</span> 
                 </div>

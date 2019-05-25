@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import Sidebar from './Sidebar/Sidebar';
 import NoteList from './NoteList/NoteList';
+import Header from './Header/Header';
 import './App.css';
 
 const STORE = {
@@ -128,7 +130,7 @@ export default class App extends Component {
   render() {
     return (
       <main role='main' className='App'>
-        <h1><a href="/">Noteful</a></h1>
+        <Route exact path='/' component={Header} /> 
         <div className='content' aria-live='polite'>
           <Sidebar />
           <NoteList store={this.state.STORE}/>
