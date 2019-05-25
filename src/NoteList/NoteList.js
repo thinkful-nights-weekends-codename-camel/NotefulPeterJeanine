@@ -8,7 +8,7 @@ export default class NoteList extends Component {
     };
 
     render() {
-        // const { notes } = this.props.STORE.notes;
+
         return (
           <section>
             <ul aria-live='polite'>

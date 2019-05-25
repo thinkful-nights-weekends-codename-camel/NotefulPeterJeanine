@@ -132,7 +132,8 @@ export default class App extends Component {
       <main role='main' className='App'>
         <Route exact path='/' component={Header} /> 
         <div className='content' aria-live='polite'>
-          <Sidebar />
+          <Sidebar store={this.state.STORE}/>
+          {/* <Route path='/note/:noteId' component={NoteList}/> */}
           <NoteList store={this.state.STORE}/>
         </div>
       </main>
