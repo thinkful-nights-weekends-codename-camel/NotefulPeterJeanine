@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Note(props) {
     return (
-        <li>
+        <li key={props.id}>
             <div>
                 <h2><Link to={`/note/${props.id}`}>{props.name}</Link></h2>
                 <button>Delete</button>
