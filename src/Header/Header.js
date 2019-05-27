@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 export default class Header extends Component {
     render() {
         return (
-            <div>
+            <nav role='navigation'>
                 <h1><Link to="/">Noteful</Link></h1>
-            </div>
+            </nav>
         )
     }
 }
