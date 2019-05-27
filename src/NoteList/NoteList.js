@@ -8,7 +8,6 @@ export default class NoteList extends Component {
     };
 
     render() {
-
         return (
           <section>
             <ul aria-live='polite'>
