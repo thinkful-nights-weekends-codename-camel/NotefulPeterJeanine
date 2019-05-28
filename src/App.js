@@ -20,7 +20,31 @@ export default class App extends Component {
     return (
       <div className='App'>
         <nav>
-          <Sidebar store={this.state}/>
+        <Route
+            exact
+            path='/'
+            render={(props) => 
+              <Sidebar
+                {...this.state}
+              />
+            } 
+          />
+          <Route
+            path='/folder/:folderId'
+            render={() => 
+              <Sidebar
+                {...this.state}
+              />
+            } 
+          />
+          <Route
+            path='/note/:noteId'
+            render={() => 
+              <Sidebar
+                {...this.state}
+              />
+            } 
+          />
         </nav>
         <header role='banner'>
             <h1>
@@ -28,16 +52,31 @@ export default class App extends Component {
             </h1>
         </header>
         <main className='content' aria-live='polite'>
-          {/* <Route 
+          <Route 
+            exact
+            path='/' 
+            render={() => 
+              <NoteList
+                {...this.state} 
+              />
+            }
+          />
+          <Route 
+            path='/folder/:folderId'
+            render={() => 
+              <NoteList
+                {...this.state} 
+              />
+            }
+          />
+          <Route 
             path='/note/:noteId' 
-            component={NoteList}
-            // render={() => 
-            //   <NoteList
-            //     store={this.state} 
-              // />
-            // }
-          /> */}
-          <NoteList store={this.state}/>
+            render={() => 
+              <NoteList
+                {...this.state} 
+              />
+            }
+          />
         </main>
       </div>
     );

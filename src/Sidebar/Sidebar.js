@@ -3,14 +3,14 @@ import { NavLink } from 'react-router-dom';
 
 export default class Sidebar extends Component {
     static defaultProps = {
-        store: []
+        folders: []
     };
 
     render() {
         return (
             <section>
                 <ul aria-live='polite'>
-                        {this.props.store.folders.map(folder =>
+                        {this.props.folders.map(folder =>
                           <li key={folder.id}>
                             <NavLink to={`/folder/${folder.id}`}>{folder.name}</NavLink>
                           </li>

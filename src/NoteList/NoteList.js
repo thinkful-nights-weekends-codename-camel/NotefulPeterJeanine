@@ -4,14 +4,14 @@ import Note from '../Note/Note';
 
 export default class NoteList extends Component {
     static defaultProps = {
-        store: []
+        notes: [],
     };
 
     render() {
         return (
           <section>
             <ul aria-live='polite'>
-               { this.props.store.notes.map(note => 
+               { this.props.notes.map(note => 
                 <Note
                   key={note.id}
                   {...note}

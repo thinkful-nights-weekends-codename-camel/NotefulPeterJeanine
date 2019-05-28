@@ -7,10 +7,10 @@ export default function Note(props) {
             <div>
                 <h2><Link to={`/note/${props.id}`}>{props.name}</Link></h2>
                 <button>Delete</button>
-                <p>{props.content}</p>
                 <div>
                     Modified <span>{props.modified}</span> 
                 </div>
+                <p>{props.content}</p>
             </div>
         </li>
     )
