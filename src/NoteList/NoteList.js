@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Note from '../Note/Note';
-// import AddNote from './AddNote/AddNote.js';
+import AddNote from '../AddNote/AddNote';
 
 export default class NoteList extends Component {
     static defaultProps = {
@@ -18,6 +18,7 @@ export default class NoteList extends Component {
                 />
                )}
             </ul>  
+            <AddNote />
           </section>
         );
     }

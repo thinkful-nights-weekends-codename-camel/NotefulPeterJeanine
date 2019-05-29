@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import Sidebar from './Sidebar/Sidebar';
 import NoteList from './NoteList/NoteList';
+import NoteListFilter from './NoteListFilter/NoteListFilter';
 import dummyStore from './dummy-store'
 import './App.css';
 
@@ -63,9 +64,11 @@ export default class App extends Component {
           />
           <Route 
             path='/folder/:folderId'
-            render={() => 
-              <NoteList
+            render={(match) => 
+              <NoteListFilter
                 {...this.state} 
+                {...match} 
+                
               />
             }
           />
