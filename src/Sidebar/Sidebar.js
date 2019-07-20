@@ -10,11 +10,11 @@ export default class Sidebar extends Component {
         return (
             <section>
                 <ul aria-live='polite'>
-                        {this.props.folders.map(folder =>
-                          <li key={folder.id}>
+                    {this.props.folders.map(folder =>
+                        <li key={folder.id}>
                             <NavLink to={`/folder/${folder.id}`}>{folder.name}</NavLink>
-                          </li>
-                        )}
+                        </li>
+                    )}
                 </ul>
                 <div>
                     <a href='#'>+ Folder</a>
